@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { allBooks } from './data';
 
-let AllBooksObservable$ = new Observable(subscribe => {
+let AllBooksObservable$ = Observable.create(subscribe => {
     
     if (document.title == '') {
         subscribe.error('please add title element');
